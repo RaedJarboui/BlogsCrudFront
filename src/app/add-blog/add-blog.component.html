@@ -1,0 +1,65 @@
+<button routerLink="/blogs"><i class="fa fa-arrow-left" aria-hidden="true" ></i>Back</button>
+
+<div class="container">
+  <h1>Create New Blog</h1>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="id">ID:</label>
+
+      <input formControlName="id" id="id" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="title">Title:</label>
+
+      <input
+        formControlName="title"
+        id="title"
+        type="text"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="content">content</label>
+
+      <textarea
+        formControlName="content"
+        id="content"
+        type="text"
+        class="form-control"
+      >
+      </textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author:</label>
+
+      <input
+        formControlName="author"
+        id="author"
+        type="text"
+        class="form-control"
+      />
+    </div>
+
+    <div class="votebox">
+      <button type="button" 
+      (click)="upvote()" 
+      data-loading-text=" ... ">
+      <i class="fas fa-thumbs-up"></i>
+  </button>
+  <span class="vote-count">{{ voteup }}</span>
+
+<button type="button" (click)="downvote()"  data-loading-text=" ... ">
+  <i class="fas fa-thumbs-down"></i>
+
+  </button>
+  <span class="vote-count">{{ votedown }}</span> 
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+      Submit
+    </button>
+  </form>
+</div>

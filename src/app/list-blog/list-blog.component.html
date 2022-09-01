@@ -1,0 +1,28 @@
+
+ <div class="form-group row">
+    <label for="search" class="col-sm-2 col-form-label" style="text-align:right;">search</label>
+    <div class="col-sm-6">
+        <input type="text" [(ngModel)]="search" class="form-control" id="search">
+    </div>
+  </div>
+
+<div class="content">
+    <div class="container">
+      <div class="row" *ngFor="let blog of blogs | searchfilter:search ">
+        <div class="blogpost">
+          <h3 *ngIf ="blog.upvote > blog.downvote"><a routerLink="/blog/{{blog.id}}" style="color:green">{{blog.title}}</a></h3>
+          <h3 *ngIf ="blog.upvote < blog.downvote"><a routerLink="/blog/{{blog.id}}" style="color:red">{{blog.title}}</a></h3>
+
+          <div>
+            <i class="fas fa-user"></i> Author: <p>{{blog.author}}</p>
+          </div>
+          Content :<p [innerHTML]="blog.content"></p>
+          <div>
+            <a type="button" routerLink="/blog/{{blog.id}}" class="btn btn-primary">Read More</a>
+          </div>
+          <hr>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>

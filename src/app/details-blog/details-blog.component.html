@@ -1,0 +1,23 @@
+<button routerLink="/blogs"><i class="fa fa-arrow-left" aria-hidden="true" ></i>Back</button>
+
+<div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-8">
+          <h1 class="blog-title">{{blog.title}}</h1>
+          <span>
+                    <p>by {{blog.author}}</p>
+                </span>
+          <hr>
+          <p [innerHTML]="blog.content"></p>
+          <hr>
+          <p>upvote number : {{blog.upvote}}</p>
+          <p>downvote number : {{blog.downvote}}</p>
+
+        </div>
+
+      </div>
+   
+    </div>
+  </div>
