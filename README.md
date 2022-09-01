@@ -1,3 +1,32 @@
+1.The blogs list page:
+
+Displays a list of blogs previews
+Each blog has a title, content, author, an upvote and downvote buttons.
+Each blog has ‘continue reading’ link that redirect to the detailed blog page.
+For each blog, the style is determined by the upvote/downvote ratio.
+(For example, the blog preview’s border should be green if the upvotes are more than the downvotes or red otherwise) :
+*Blogs having more upvotes than downvotes
+
+![lisblogs](https://user-images.githubusercontent.com/48753442/187877857-f2f560fd-b6ee-4110-a69a-01dc3ec1c58b.jpg)
+
+*Blogs having more downvotes than upvotes
+
+![listblogsred](https://user-images.githubusercontent.com/48753442/187877945-c872e8d2-06c6-42e3-996b-23d5d0d3330e.jpg)
+
+-we can access to every blog detail : either by clicking on blog title ,or via the button read more
+
+*Blog add Form :
+
+![blogsadd](https://user-images.githubusercontent.com/48753442/187878449-77dfc81d-ca54-497f-975b-149b360b3b30.jpg)
+
+and finally user can search filter for the blog’s content/title/author in list blogs page :
+
+![bloglistsearch](https://user-images.githubusercontent.com/48753442/187878609-d9c68d37-3157-41df-9aaa-5bf7d8cb8b9c.jpg)
+
+
+
+
+
 # BlogsCrud
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
